@@ -8,9 +8,10 @@ Figure 2：The SemMol model projects multi-dimensional molecular representations
 
 
 
-## Pre-trained Models
+## Pre-trained Models and Datasets
 Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
-Download link: https://pan.baidu.com/s/1nIcHZoealZG2kRBem0949w Extraction code: abcd
+Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
+Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
 Please download and extract the files before training or fine-tuning.
 ---
 
@@ -26,23 +27,6 @@ Please download and extract the files before training or fine-tuning.
 
 ---
 
-## 🗂️ Project Structure
-
-```
-├── config/           # Centralized configuration (config.json)
-├── core/             # Core algorithms: center library, clustering, pseudo-pair logic
-├── data/             # Example datasets (CSV, SMILES, targets)
-├── datasets/         # Data loading, splitting (scaffold/random), and processing
-├── img/              # Images and figures for reports or publications
-├── model/            # Model components: embedding, fusion, projector, pseudo-pair
-├── model_config/     # Model download and usage instructions
-├── weight/           # Pretrained weights and training history
-├── train.py          # Main training & evaluation script
-├── environment.yml   # Conda environment for full reproducibility
-└── README.md         # This documentation
-```
-
----
 
 ## ⚙️ Installation & Environment
 
@@ -52,19 +36,18 @@ Please download and extract the files before training or fine-tuning.
    conda env create -f environment.yml
    conda activate A
    ```
-3. **Install additional dependencies** (if needed)
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ---
 
 ## 📊 Datasets
-
-- Place your CSV datasets in `data/`. Each file should contain a `smiles` column and the appropriate target column (see `config/config.json`).
-- Supported datasets: BBBP, ESOL, Lipophilicity, Tox21, etc.
-- Data splitting: Scaffold split (chemically-aware) and random split are both supported.
-
+Input format: CSV files containing a smiles column and corresponding target column(s)
+   Supported benchmarks:
+   BBBP
+   ESOL
+   Lipophilicity
+   Tox21
+   Data split strategies:
+   Scaffold split (default, chemically-aware)
+   Random split
 ---
 
 ## 🧩 Configuration
@@ -82,79 +65,40 @@ See in-file comments and descriptions for all options.
 
 ---
 
-## 🏃‍♂️ Training & Evaluation
+## 🏃‍♂️ Training & Finetune
 
-**Basic usage:**
+**Training:**
 ```bash
-python train.py \
-    --task-type classification \
-    --data-path path \
-    --target-column Class/reg \
-    --batch-size 32 \
-    --lr 5e-4 \
-    --epochs 50 \
-    --hard-negative-k -1
+chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
+/data/FL/Semol/scripts/start_Pre_DPP.sh
+**Finetune:**
+python finetune.py
 ```
 
-**Advanced examples:** (see `config/config.json` for more)
+**Finetune:**
 ```bash
-python train \
-    --task-type regression \
-    --data-path path \
-    --target-column   -- \
-    --normalize-targets \
-    --batch-size 64 \
-    --lr 5e-4 \
-    --epochs 50 \
-    --hard-negative-k 32 \
-    --hard-negative-ratio 0.3
+python finetune.py
+```
+**All model checkpoints, logs, and training histories are saved in:**
+```bash
+Save_model/
 ```
 
-**Model weights and training history** are saved in `weight/` after each run.
+📈 Reproducibility
+-Fixed random seeds for all experiments
+-Centralized configuration management
+-Modular and extensible codebase for easy customization
 
----
-
-## 🏗️ Extending the Platform
-
-- **Add new datasets**: Place in `data/` and update `config/config.json`.
-- **Custom models**: Implement in `model/` and reference in config.
-- **New data splits or augmentations**: Add to `datasets/`.
-- **Custom loss or metrics**: Extend in `core/` or `train.py`.
-
----
-
-## 📥 Pretrained Models
-
-See `model_config/File Description` for download links and usage instructions for pretrained models.
-
----
-
-## 🧪 Reproducibility & Best Practices
-
-- All random seeds, splits, and hyperparameters are controlled via config.
-- Use `environment.yml` for full environment reproducibility.
-- For large-scale or production runs, see the `production_mode` and `debug_mode` settings in config.
-
----
-
-## 📚 References & Citation
-
-If you use this platform in your research, please cite the original authors and relevant papers.
-
----
-
-## 🤝 Contributing & Support
-
-- Pull requests and issues are welcome!
-- For questions, suggestions, or bug reports, please open an issue.
-
----
-
-**Contact:** For collaboration or consulting, please reach out via GitHub or email.
-
-
-
-
+📚 Citation
+If you use SemMol in your research, please cite the original authors:
+```bash
+@article{semmol,
+  title={SemMol: Semantic-Level Multi-Modal Molecular Representation Learning},
+  author={Anonymous},
+  journal={arXiv preprint},
+  year={202X}
+}
+```
 
 
 
