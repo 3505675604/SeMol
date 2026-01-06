@@ -1,10 +1,11 @@
-
+<img width="1493" height="1310" alt="图片1" src="https://github.com/user-attachments/assets/8df2ce67-0b8f-471e-8914-c4e604c92ac6" />
 # Semantic-level multimodal molecular learning inspired by biological concept formation via soft matching.
 
-Figure 1：Based on biomimetic principles, the SemMol model utilizes a "Dynamic Center Library" (DCL) and a soft matching mechanism to deeply learn molecular structural and semantic features from large-scale data. Experiments demonstrate that the model consistently outperforms existing state-of-the-art methods in both molecular representation learning and property prediction.
-![10](https://github.com/user-attachments/assets/47f17e40-5fad-4882-b452-f8f165edbedd)
-Figure 2：The SemMol model projects multi-dimensional molecular representations into a unified space and constructs a Dynamic Center Library (DCL), utilizing the soft matching mechanism (ACSM) to achieve one-to-many associations between molecules and semantic centers. Compared to traditional one-to-one matching, this method enables learning from a broader knowledge distribution, significantly enhancing the model's generalization ability and discriminative power.
-![9](https://github.com/user-attachments/assets/6eb4750e-b7a4-4ebf-9494-86e2d59c1fc6)
+Figure 1：This figure illustrates the transition from instance-level to semantic-level alignment in multimodal molecular representation learning, where semantic-level alignment captures higher-level cross-modal semantics beyond one-to-one matching. Inspired by human holistic perception, a semantic-level soft matching mechanism is introduced, resulting in improved classification performance across multiple molecular benchmarks.
+![WPS图片(1)](https://github.com/user-attachments/assets/eec1ebf2-230a-4315-9b4d-dcf797eb9de6)
+Figure 2：This figure illustrates the semantic-level multimodal molecular representation learning framework of SemMol. It constructs and updates 2D and 3D semantic centers via intra-batch clustering and EMA-based mini-batch K-means, then employs the ACSM mechanism to generate similarity-weighted positives and informative hard negatives. These samples are used for semantic alignment training to achieve cross-modal semantic consistency.
+<img width="1493" height="1310" alt="图片1" src="https://github.com/user-attachments/assets/1152bc6a-7c20-4239-8d26-ef0139749594" />
+
 
 ##
 The most important supplementary file is provided at the following link: https://github.com/3505675604/SemMol/blob/main/Supplementary_Materials/Supplementary%20Materials.pdf
@@ -37,6 +38,25 @@ The most important supplementary file is provided at the following link: https:/
    conda env create -f environment.yml
    conda activate A
    ```
+🏃‍♂️ Training, Fine-tuning, and Resources
+Training :Run the following commands to start pre-training:
+```bash
+chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
+/data/FL/Semol/scripts/start_Pre_DPP.sh
+```
+Fine-tuning :Fine-tune the pretrained model with:
+```bash
+python finetune.py
+```
+Pre-trained Models and Datasets
+We provide the pre-trained SemMol model (trained on 1M molecules) and the datasets used for pre-training and downstream fine-tuning:
+- Pre-trained Models (1M molecules): https://huggingface.co/Lin-Glory/SemMol_model
+- Datasets (for pre-training and fine-tuning): https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
+  Note: Please download and extract all files before starting training or fine-tuning.
+Outputs：All model checkpoints, logs, and training histories are saved in:
+```bash
+Save_model/
+```
 ---
 
 ## 📊 Datasets
@@ -66,21 +86,6 @@ See in-file comments and descriptions for all options.
 
 ---
 
-## 🏃‍♂️ Training & Finetune
-
-**Training:**
-```bash
-chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
-/data/FL/Semol/scripts/start_Pre_DPP.sh
-```
-**Finetune:**
-```bash
-python finetune.py
-```
-**All model checkpoints, logs, and training histories are saved in:**
-```bash
-Save_model/
-```
 
 📈 Reproducibility
 -Fixed random seeds for all experiments
