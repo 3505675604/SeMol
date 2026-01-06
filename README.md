@@ -9,10 +9,10 @@ Figure 2：The SemMol model projects multi-dimensional molecular representations
 
 
 ## Pre-trained Models and Datasets
-Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
-Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
-Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
-Please download and extract the files before training or fine-tuning.
+-Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
+-Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
+-Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
+-Please download and extract the files before training or fine-tuning.
 ---
 
 ## 🚀 Features
@@ -39,15 +39,15 @@ Please download and extract the files before training or fine-tuning.
 ---
 
 ## 📊 Datasets
-Input format: CSV files containing a smiles column and corresponding target column(s)
-   Supported benchmarks:
-   BBBP
-   ESOL
-   Lipophilicity
-   Tox21
-   Data split strategies:
-   Scaffold split (default, chemically-aware)
-   Random split
+-Input format: CSV files containing a smiles column and corresponding target column(s)
+   -Supported benchmarks:
+   -BBBP
+   -ESOL
+   -Lipophilicity
+   -Tox21
+   -Data split strategies:
+   -Scaffold split (default, chemically-aware)
+   -Random split
 ---
 
 ## 🧩 Configuration
@@ -71,10 +71,7 @@ See in-file comments and descriptions for all options.
 ```bash
 chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
 /data/FL/Semol/scripts/start_Pre_DPP.sh
-**Finetune:**
-python finetune.py
 ```
-
 **Finetune:**
 ```bash
 python finetune.py
