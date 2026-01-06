@@ -1,5 +1,4 @@
-<img width="1493" height="1310" alt="图片1" src="https://github.com/user-attachments/assets/8df2ce67-0b8f-471e-8914-c4e604c92ac6" />
-# Semantic-level multimodal molecular learning inspired by biological concept formation via soft matching.
+# Semantic-level multimodal molecular learning inspired by biological concept formation via soft matching
 
 Figure 1：This figure illustrates the transition from instance-level to semantic-level alignment in multimodal molecular representation learning, where semantic-level alignment captures higher-level cross-modal semantics beyond one-to-one matching. Inspired by human holistic perception, a semantic-level soft matching mechanism is introduced, resulting in improved classification performance across multiple molecular benchmarks.
 ![WPS图片(1)](https://github.com/user-attachments/assets/eec1ebf2-230a-4315-9b4d-dcf797eb9de6)
