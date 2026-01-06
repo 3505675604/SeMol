@@ -9,13 +9,6 @@ Figure 2：This figure illustrates the semantic-level multimodal molecular repre
 ##
 The most important supplementary file is provided at the following link: https://github.com/3505675604/SemMol/blob/main/Supplementary_Materials/Supplementary%20Materials.pdf
 
-## Pre-trained Models and Datasets
-- **Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
-- **Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
-- **Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
-- **Please download and extract the files before training or fine-tuning.
----
-
 ## 🚀 Features
 - Semantic-level learning: By introducing the anchor-center soft matching (ACSM) mechanism and the dynamic center library (DCL), cross-modal semantic alignment is achieved, avoiding the risk of overfitting caused by one-to-one instance matching. This method can simultaneously capture the global skeleton structure and local functional group characteristics of the molecule, improving the model's generalization ability and interpretability.
 - **Multi-Modal Learning**: Integrates chemical structure, text, and other modalities for improved prediction.
