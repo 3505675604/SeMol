@@ -9,10 +9,10 @@ Figure 2：The SemMol model projects multi-dimensional molecular representations
 
 
 ## Pre-trained Models and Datasets
--Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
--Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
--Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
--Please download and extract the files before training or fine-tuning.
+- **Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
+- **Models:Download link: https://huggingface.co/Lin-Glory/SemMol_model
+- **Datasets:Download link: https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
+- **Please download and extract the files before training or fine-tuning.
 ---
 
 ## 🚀 Features
