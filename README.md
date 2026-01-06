@@ -24,8 +24,11 @@ The most important supplementary file is provided at the following link: https:/
 
 ## ⚙️ Installation & Environment
 
-1. **Clone the repository**
-2. **Create environment** (recommended)
+1. **Clone the repository
+   ```bash
+   https://github.com/3505675604/SemMol.git
+   ```
+3. **Create environment** (recommended)
    ```bash
    conda env create -f environment.yml
    conda activate A
@@ -44,7 +47,9 @@ Pre-trained Models and Datasets
 We provide the pre-trained SemMol model (trained on 1M molecules) and the datasets used for pre-training and downstream fine-tuning:
 - Pre-trained Models (1M molecules): https://huggingface.co/Lin-Glory/SemMol_model
 - Datasets (for pre-training and fine-tuning): https://huggingface.co/datasets/Lin-Glory/SemMol_datasets/tree/main/dataset
-  Note: Please download and extract all files before starting training or fine-tuning.
+
+Note: Please download and extract all files before starting training or fine-tuning.
+
 Outputs：All model checkpoints, logs, and training histories are saved in:
 ```bash
 Save_model/
