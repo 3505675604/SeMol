@@ -93,7 +93,7 @@ See in-file comments and descriptions for all options.
 If you use SemMol in your research, please cite the original authors:
 ```bash
 @article{semmol,
-  title={SemMol: Semantic-Level Multi-Modal Molecular Representation Learning},
+  title={SemMol:Semantic-level multimodal molecular learning inspired by biological concept formation via soft matching},
   author={Anonymous},
   journal={arXiv preprint},
   year={202X}
