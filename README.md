@@ -6,7 +6,8 @@ Figure 1：Based on biomimetic principles, the SemMol model utilizes a "Dynamic 
 Figure 2：The SemMol model projects multi-dimensional molecular representations into a unified space and constructs a Dynamic Center Library (DCL), utilizing the soft matching mechanism (ACSM) to achieve one-to-many associations between molecules and semantic centers. Compared to traditional one-to-one matching, this method enables learning from a broader knowledge distribution, significantly enhancing the model's generalization ability and discriminative power.
 ![9](https://github.com/user-attachments/assets/6eb4750e-b7a4-4ebf-9494-86e2d59c1fc6)
 
-
+##
+The most important supplementary file is provided at the following link: https://github.com/3505675604/SemMol/blob/main/Supplementary_Materials/Supplementary%20Materials.pdf
 
 ## Pre-trained Models and Datasets
 - **Our pre-trained SemMol mode can all be downloaded via Baidu Netdisk:
