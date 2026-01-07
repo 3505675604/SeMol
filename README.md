@@ -26,11 +26,11 @@ The most important supplementary file is provided at the following link: https:/
 
 ## ⚙️ Installation & Environment
 
-1. **Clone the repository
+1. Clone the repository
    ```bash
-   https://github.com/3505675604/SemMol.git
+   git clone https://github.com/3505675604/SemMol.git
    ```
-3. **Create environment** (recommended)
+3. Create environment (recommended)
    ```bash
    conda env create -f environment.yml
    conda activate A
@@ -38,12 +38,12 @@ The most important supplementary file is provided at the following link: https:/
 🏃‍♂️ Training, Fine-tuning, and Resources
 Training :Run the following commands to start pre-training:
 ```bash
-chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
-/data/FL/Semol/scripts/start_Pre_DPP.sh
+   chmod +x /data/FL/Semol/scripts/start_Pre_DPP.sh
+   /data/FL/Semol/scripts/start_Pre_DPP.sh
 ```
 Fine-tuning :Fine-tune the pretrained model with:
 ```bash
-python finetune.py
+   python finetune.py
 ```
 Pre-trained Models and Datasets
 We provide the pre-trained SemMol model (trained on 1M molecules) and the datasets used for pre-training and downstream fine-tuning:
@@ -54,7 +54,7 @@ Note: Please download and extract all files before starting training or fine-tun
 
 Outputs：All model checkpoints, logs, and training histories are saved in:
 ```bash
-Save_model/
+   Save_model/
 ```
 ---
 
